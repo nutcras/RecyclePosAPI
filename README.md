@@ -19,7 +19,7 @@ A comprehensive management system for secondhand shops, developed to help shop o
 ## Prerequisites
 - Java 17+
 - Docker & Docker Compose
-- PostgresSQL
+- PostgresSQL <- docker is open auto
 - (Optional) JasperStudio for editing report templates
 
 
