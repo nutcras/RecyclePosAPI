@@ -1,0 +1,76 @@
+<!-- Created with Jaspersoft Studio version 7.0.2.final using JasperReports Library version 7.0.2-31532122640f516c6d17238ae0e41a08113d5ac0  -->
+<jasperReport name="saleReport" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="43e37e9a-ccd3-4af2-9e94-d3c72661808d">
+	<parameter name="company" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="memberId" class="java.lang.String"/>
+	<parameter name="phone" class="java.lang.String"/>
+	<query language="sql"><![CDATA[]]></query>
+	<field name="saleDetailId" class="java.lang.Long"/>
+	<field name="productName" class="java.lang.Long"/>
+	<background splitType="Stretch"/>
+	<title height="60" splitType="Stretch">
+		<element kind="textField" uuid="ec39bd7c-e2ba-432d-87b3-d418fc629ed5" x="80" y="0" width="400" height="30" fontName="THSarabunNew" fontSize="22.0" bold="true" hTextAlign="Center">
+			<expression><![CDATA[$P{company}]]></expression>
+		</element>
+		<element kind="textField" uuid="424e5bcf-6fdc-45c8-9d05-e0aceeeeaf6d" x="80" y="30" width="400" height="30" fontName="THSarabunNew" fontSize="18.0" bold="true" hTextAlign="Center">
+			<expression><![CDATA[$P{address}]]></expression>
+		</element>
+	</title>
+	<pageHeader height="80" splitType="Stretch">
+		<element kind="staticText" uuid="11d10d74-5e76-48b5-9234-32a8d7f49576" x="0" y="20" width="100" height="20" fontName="THSarabunNew" fontSize="12.0">
+			<text><![CDATA[รหัสลูกค้า]]></text>
+		</element>
+		<element kind="staticText" uuid="8a5cd7ab-cf30-43d4-927d-bec262d185b9" x="0" y="40" width="100" height="20" fontName="THSarabunNew" fontSize="12.0">
+			<text><![CDATA[ชื่อ]]></text>
+		</element>
+		<element kind="staticText" uuid="5148cecb-9756-470b-bcb3-0fa043a86321" x="0" y="60" width="100" height="20" fontName="THSarabunNew" fontSize="12.0">
+			<text><![CDATA[โทร.]]></text>
+		</element>
+		<element kind="textField" uuid="a9b42ed9-679a-4558-8748-5003e591ac86" x="120" y="20" width="220" height="20" fontName="THSarabunNew" fontSize="12.0">
+			<expression><![CDATA[$P{memberId}]]></expression>
+		</element>
+		<element kind="textField" uuid="920f7aa2-f6bd-4394-9642-9414bcc5e8a7" x="120" y="40" width="220" height="20" fontName="THSarabunNew" fontSize="12.0">
+			<expression><![CDATA[$P{name}]]></expression>
+		</element>
+		<element kind="textField" uuid="f6f65d74-e4e7-4258-b112-a562cad45b6a" x="120" y="60" width="220" height="20" fontName="THSarabunNew" fontSize="12.0">
+			<expression><![CDATA[$P{phone}]]></expression>
+		</element>
+	</pageHeader>
+	<columnHeader height="40">
+		<element kind="staticText" uuid="68d13fc7-be51-4aef-bdaf-2ea08b16352f" x="0" y="10" width="50" height="30" fontName="THSarabunNew" fontSize="12.0" vTextAlign="Middle">
+			<text><![CDATA[รหัส]]></text>
+			<box leftPadding="5" rightPadding="5"/>
+		</element>
+		<element kind="staticText" uuid="023e12a7-3152-49d2-b976-1127c02127f2" x="50" y="10" width="170" height="30" fontName="THSarabunNew" fontSize="12.0" vTextAlign="Middle">
+			<text><![CDATA[ชื่อสินค้า]]></text>
+			<box leftPadding="5" rightPadding="5"/>
+		</element>
+		<element kind="staticText" uuid="6a723d55-8fef-4e60-9a1d-278f33524974" x="220" y="10" width="90" height="30" fontName="THSarabunNew" fontSize="12.0" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[ราคาสินค้า]]></text>
+			<box leftPadding="5" rightPadding="5"/>
+		</element>
+		<element kind="staticText" uuid="d643d0e4-9168-477d-bc74-5b6bac08ea02" x="310" y="10" width="80" height="30" fontName="THSarabunNew" fontSize="12.0" vTextAlign="Middle">
+			<text><![CDATA[หน่วย]]></text>
+			<box leftPadding="5" rightPadding="5"/>
+		</element>
+		<element kind="staticText" uuid="f94be866-74ee-4549-a55b-cf1cd18d8533" x="390" y="10" width="90" height="30" fontName="THSarabunNew" fontSize="12.0" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[ปริมาณ]]></text>
+			<box leftPadding="5" rightPadding="5"/>
+		</element>
+		<element kind="staticText" uuid="e22d25de-2477-4170-bbdb-6c246c765731" x="480" y="10" width="80" height="30" fontName="THSarabunNew" fontSize="12.0" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[จำนวนเงิน]]></text>
+			<box leftPadding="5" rightPadding="5"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<element kind="textField" uuid="5c19e842-f494-4e02-9f8a-c04cb1e59e11" x="0" y="0" width="50" height="30">
+				<expression><![CDATA[$F{saleDetailId}]]></expression>
+			</element>
+			<element kind="textField" uuid="77948c3e-467c-4e08-bdb1-471399d155e3" x="50" y="0" width="170" height="30">
+				<expression><![CDATA[$F{saleDetailId}]]></expression>
+			</element>
+		</band>
+	</detail>
+</jasperReport>
